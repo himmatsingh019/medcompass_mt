@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABpklEQVR4nJ2TO0sDQRSFz93dZCUxlc9YqJ2IScAnwUKwMuAfsAmIaKzEaAoh4D9QsDUoijYWEixE/AFG7RW0kIiFMSqCqAF34+7KTMhjkkUkB5ZhH/fbM/fcUQzDyBKRC3VKYcVE5KkbYPdQPwjCer+D1DMFqXUAZvoYZiYFeXAZytDK3wBtsxXOuQxIKr+S+2b4aj5dQku0QY082wNYsTr/Ymv1+u0KPm8QztlH4bsSgNlmf7ZTMn2IXP4LviY/dyb3R2EZGkhWywC250rbRe3d7oCI4FLKQSkjcWiJdqiRbBnAGlapT/0DR/dJXswU6pwUyZYpboF1u6jThxO8fou9cDvcVd4sEcCiYt2OnUeRy+egmzoIBBQMINwzXQWgKkDmjK/roxv40j+xmFoo2fe6Omp6Qy0BESAPxnjOkjeIRqcH2+O72LpJ4PL5AtHAklCs7/vgDF+LADZhbEhYzsU0Znsj/KrUz/kqqCtUuhdyYxPGhkQeiEIZjtfY1vb9kLon4BhbswdwyPwLLOOb51yIyuINo+YA1PBVDdT2MJHcwIfkP/oF1miFluYGnlEAAAAASUVORK5CYII=" />
+    <meta name="description" content="A new Flutter project.">
+    <title>MedCompass</title>
+</head>
+
+<body>
+
+    <div class="flex m-14">
+        <div class="mr-5">
+            <img class="w-48" src="data:image/png;base64, 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" alt="logo">
+        </div>
+        <div>
+            <h1 class="text-3xl text-sky-500 mb-5">MedCompass</h1>
+            <h3 class="text-xl text-gray-600  mb-8">Version 1.0.0.46</h3>
+            <button class="bg-sky-500 hover:bg-sky-400 transition-colors rounded-md text-white px-8 py-1  mb-3"
+                onclick="download()">Install</button>
+            <a href="https://go.microsoft.com/fwlink/?linkid=870616" target="_blank">
+                <p class="text-sky-500  mb-5">Troubleshoot installation</p>
+            </a>
+            <h3 class="text-xl text-gray-600 mb-4">Application Information</h3>
+
+            <div class="flex text-gray-500">
+                <div class="font-bold mr-14">
+                    <div class="mb-4">Version</div>
+                    <div class="mb-4">Required Operating System</div>
+                    <div class="mb-4">Architectures</div>
+                    <div class="mb-4">Publisher</div>
+                </div>
+                <div>
+                    <div class="mb-4">1.0.0.46</div>
+                    <div class="mb-4">10.0.17763.0</div>
+                    <div class="mb-4">x64</div>
+                    <div class="mb-4">Assurecare LLC</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function download() {
+            var a = document.createElement("a");
+            a.href = '/medcompass.appinstaller';
+            a.setAttribute("download", 'medcompass.appinstaller');
+            a.click();
+        }
+    </script>
+</body>
+
+</html>
