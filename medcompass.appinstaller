@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
   <AppInstaller xmlns="http://schemas.microsoft.com/appx/appinstaller/2018"
-    Uri="medcompass.appinstaller" Version="1.0.0.46">
+    Uri="https://himmatsingh019.github.io/medcompass_mt/medcompass.appinstaller" Version="1.0.0.46">
     <MainPackage Name="com.assurecare.medcompass" Version="1.0.0.46"
       Publisher="CN=Msix Testing, O=Msix Testing Corporation, S=Some-State, C=US"
-      Uri="medcompass_1.0.0.46.msix"
+      Uri="https://himmatsingh019.github.io/medcompass-app/medcompass_1.0.0.46.msix"
       ProcessorArchitecture="x64" />
     <UpdateSettings>
       <OnLaunch HoursBetweenUpdateChecks="0" 
